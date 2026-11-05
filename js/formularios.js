@@ -28,7 +28,7 @@
 window.EMPRESA = {
   nombre: 'Cono Sur',
   subtitulo: 'Ingeniería',
-  logo: 'icons/logo.svg',
+  logo: 'icons/logo.png',
 };
 
 window.FORMULARIOS = {

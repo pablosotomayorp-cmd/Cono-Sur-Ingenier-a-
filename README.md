@@ -33,7 +33,7 @@ Todo está en **`js/formularios.js`**. Cada campo es una línea como:
 ```
 
 Al inicio del archivo está la lista de tipos (texto, número, fecha, hora, lista, checklist, tabla, firma, fotos…).
-Los colores están al inicio de `css/styles.css` y el logo en `icons/logo.svg`.
+Los colores están al inicio de `css/styles.css` y el logo en `icons/logo.png`.
 
 Si cambias archivos después de publicar, sube el número en `sw.js` (`conosur-v1` → `conosur-v2`) para que los celulares tomen la versión nueva.
 
