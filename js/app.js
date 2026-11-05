@@ -461,7 +461,7 @@
     const r = cv.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
     cv.width = r.width * dpr; cv.height = r.height * dpr;
     const ctx = cv.getContext('2d');
-    ctx.scale(dpr, dpr); ctx.lineWidth = 2.6; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = '#0f2a44';
+    ctx.scale(dpr, dpr); ctx.lineWidth = 2.6; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = '#122333';
     let dibujando = false, hayTrazo = false, last;
     const pos = (e) => { const b = cv.getBoundingClientRect(); return [e.clientX - b.left, e.clientY - b.top]; };
     cv.onpointerdown = (e) => { dibujando = true; last = pos(e); cv.setPointerCapture(e.pointerId); ctx.beginPath(); ctx.arc(last[0], last[1], 1.2, 0, 7); ctx.fillStyle = ctx.strokeStyle; ctx.fill(); hayTrazo = true; };

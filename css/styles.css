@@ -1,9 +1,9 @@
 /* Cono Sur · estilos. Colores principales: cambia aquí. */
 :root {
-  --azul: #0f2a44;
-  --azul-2: #1b3d61;
-  --naranjo: #f28c28;
-  --naranjo-osc: #d9731a;
+  --azul: #122333;
+  --azul-2: #1f3a55;
+  --acento: #f5be26;   /* amarillo del logo */
+  --acento-osc: #e0a910;
   --fondo: #f2f4f7;
   --tarjeta: #ffffff;
   --texto: #1a2433;
@@ -33,7 +33,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   background: var(--azul); color: #fff;
 }
 .brand { display: flex; align-items: center; gap: 10px; }
-.brand-logo { width: 38px; height: 38px; border-radius: 9px; background: #fff1; object-fit: contain; }
+.brand-logo { width: 40px; height: 40px; border-radius: 10px; background: #fff; object-fit: contain; padding: 4px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-text strong { font-size: 18px; letter-spacing: .3px; }
 .brand-text span { font-size: 12px; opacity: .75; text-transform: uppercase; letter-spacing: 1.5px; }
@@ -45,7 +45,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .icon-btn:hover { background: #0001; }
 .topbar .icon-btn:hover { background: #fff2; }
 .icon-btn svg { width: 22px; height: 22px; fill: currentColor; }
-.btn-install { background: var(--naranjo); color: #fff; border: 0; padding: 8px 12px; font-size: 14px; }
+.btn-install { background: var(--acento); color: var(--azul); border: 0; padding: 8px 12px; font-size: 14px; }
 
 /* ---------- Pestañas ---------- */
 .tabs {
@@ -60,7 +60,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   white-space: nowrap; text-decoration: none;
 }
 .tab svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
-.tab[aria-selected="true"] { color: #fff; border-bottom-color: var(--naranjo); }
+.tab[aria-selected="true"] { color: #fff; border-bottom-color: var(--acento); }
 .tab .count { background: #ffffff22; border-radius: 99px; padding: 1px 8px; font-size: 12px; }
 
 /* En celular las pestañas van abajo, como una app */
@@ -71,7 +71,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   }
   .tab { flex-direction: column; gap: 3px; padding: 8px 4px 9px; font-size: 12px; color: var(--suave); border-bottom: 0; border-top: 3px solid transparent; }
   .tab svg { width: 24px; height: 24px; }
-  .tab[aria-selected="true"] { color: var(--azul); border-top-color: var(--naranjo); }
+  .tab[aria-selected="true"] { color: var(--azul); border-top-color: var(--acento); }
   .tab .count { display: none; }
   .main { padding-bottom: calc(90px + var(--safe-b)) !important; }
   .form-foot { bottom: calc(64px + var(--safe-b)) !important; }
@@ -100,8 +100,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   font-weight: 600; font-size: 15px; cursor: pointer; text-decoration: none; color: var(--texto);
 }
 .btn:hover { background: #f7f8fa; }
-.btn-primary { background: var(--naranjo); border-color: var(--naranjo); color: #fff; }
-.btn-primary:hover { background: var(--naranjo-osc); }
+.btn-primary { background: var(--acento); border-color: var(--acento); color: var(--azul); }
+.btn-primary:hover { background: var(--acento-osc); }
 .btn-dark { background: var(--azul); border-color: var(--azul); color: #fff; }
 .btn-dark:hover { background: var(--azul-2); }
 .btn-sm { padding: 6px 10px; font-size: 13px; border-radius: 8px; }
@@ -137,7 +137,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .vacio h3 { color: var(--texto); margin: 0 0 6px; }
 
 .fab {
-  position: fixed; right: 20px; bottom: 24px; z-index: 15; box-shadow: 0 6px 20px rgba(242,140,40,.45);
+  position: fixed; right: 20px; bottom: 24px; z-index: 15; box-shadow: 0 6px 20px rgba(245,190,38,.5);
   border-radius: 99px; padding: 14px 20px; font-size: 16px;
 }
 @media (max-width: 720px) { .fab { bottom: calc(80px + var(--safe-b)); right: 16px; } }
@@ -160,7 +160,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   width: 100%; padding: 11px 12px; border: 1px solid var(--borde); border-radius: 10px; background: #fff;
   font-size: 16px; min-height: 46px;
 }
-.inp:focus { outline: none; border-color: var(--azul-2); box-shadow: 0 0 0 3px #1b3d6122; }
+.inp:focus { outline: none; border-color: var(--azul-2); box-shadow: 0 0 0 3px #1f3a5522; }
 textarea.inp { min-height: 84px; resize: vertical; }
 select.inp { appearance: none; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23667085' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right 10px center / 18px no-repeat; padding-right: 34px; }
 .campo.error .inp, .campo.error .firma-box, .campo.error .seg { border-color: var(--rojo); box-shadow: 0 0 0 3px #d6454522; }
@@ -233,7 +233,7 @@ select.inp { appearance: none; background: #fff url("data:image/svg+xml,%3Csvg x
 .aviso { background: #fff7ec; border: 1px solid #f8d2a8; color: #8a4b07; padding: 10px 14px; border-radius: 12px; font-size: 14px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 
 /* ---------- Modales ---------- */
-.modal { position: fixed; inset: 0; z-index: 50; background: #0f2a44aa; display: grid; place-items: center; padding: 16px; }
+.modal { position: fixed; inset: 0; z-index: 50; background: #122333aa; display: grid; place-items: center; padding: 16px; }
 .modal-card { background: #fff; border-radius: 16px; width: 100%; max-width: 640px; box-shadow: 0 20px 60px rgba(0,0,0,.3); display: flex; flex-direction: column; overflow: hidden; }
 .modal-head { display: flex; justify-content: space-between; align-items: center; padding: 10px 10px 10px 18px; border-bottom: 1px solid var(--borde); }
 .modal-foot { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--borde); }
@@ -259,8 +259,8 @@ select.inp { appearance: none; background: #fff url("data:image/svg+xml,%3Csvg x
   html, body { background: #fff; }
   #app, .modal, .toast { display: none !important; }
   .print-area { display: block; font-size: 10.5pt; color: #000; }
-  .p-head { display: flex; align-items: center; gap: 12px; border-bottom: 3px solid var(--naranjo); padding-bottom: 8px; margin-bottom: 10px; }
-  .p-head img { width: 54px; height: 54px; }
+  .p-head { display: flex; align-items: center; gap: 12px; border-bottom: 3px solid var(--acento); padding-bottom: 8px; margin-bottom: 10px; }
+  .p-head img { width: 54px; height: 60px; object-fit: contain; }
   .p-head .t { flex: 1; }
   .p-head .t b { font-size: 15pt; color: var(--azul); display: block; }
   .p-head .t span { font-size: 9pt; color: #555; text-transform: uppercase; letter-spacing: 1px; }

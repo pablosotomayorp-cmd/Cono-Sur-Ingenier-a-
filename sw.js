@@ -1,8 +1,8 @@
 /* Permite usar la app sin internet. Si cambias archivos, sube el número de versión. */
-const VERSION = 'conosur-v1';
+const VERSION = 'conosur-v2';
 const ARCHIVOS = [
   './', 'index.html', 'css/styles.css', 'js/formularios.js', 'js/app.js',
-  'manifest.webmanifest', 'icons/logo.svg', 'icons/icon-192.png', 'icons/icon-512.png',
+  'manifest.webmanifest', 'icons/logo.png', 'icons/favicon.png', 'icons/icon-192.png', 'icons/icon-512.png',
 ];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(ARCHIVOS)).then(() => self.skipWaiting()));
